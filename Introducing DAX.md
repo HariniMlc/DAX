@@ -9,10 +9,6 @@ Welcome to the DAX (Data Analysis Expressions) repository! This repository conta
   - SUMX
   - AVERAGE
   - CALCULATE
-- Advanced Functions
-  - FILTER
-  - ALL
-  - RELATED
 - Measures
 - Calculated Columns
 - Variables
@@ -46,26 +42,6 @@ AVERAGE(Sales[Amount])
 The `CALCULATE` function evaluates an expression in a modified filter context.
 ```dax
 CALCULATE(SUM(Sales[Amount]), Sales[Region] = "West")
-```
-
-## Advanced Functions
-
-### FILTER
-The `FILTER` function returns a table that represents a subset of another table.
-```dax
-FILTER(Sales, Sales[Amount] > 1000)
-```
-
-### ALL
-The `ALL` function removes all filters from a table or column.
-```dax
-ALL(Sales)
-```
-
-### RELATED
-The `RELATED` function returns a related value from another table.
-```dax
-RELATED(Product[ProductName])
 ```
 
 ## Measures
