@@ -48,8 +48,26 @@ They can be combined together to form complex expressions
 We will discover many other table functions later in the course
 
 # Calculated Tables
-- In the newest versions of Tabular (and in Power BI Desktop), you can create calculated tables.
-- User interface is different in different products.
+Virtual tables created using DAX formulas in Power BI.
+
+### Steps to Create a Calculated Table:
+
+1. **Open Power BI Desktop**.
+2. **Navigate to the Data View**.
+3. **Select New Table** from the Calculations group.
+4. **Enter your DAX formula** in the formula bar.
+
+### Example DAX Formula:
+
+```DAX
+Western Region Employees = UNION('Northwest Employees', 'Southwest Employees')
+```
+
+This will create a new table named `Western Region Employees` that combines the data from both `Northwest Employees` and `Southwest Employees`.
+
+You can now use this new table just like any other table in Power BI. You can create relationships with other tables, add measures and calculated columns, and use it in your reports and visualizations
+
+
 
 # The FILTER Function
 ### FILTER
